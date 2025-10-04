@@ -29,4 +29,5 @@ docker run -p 8000:80 task-management-api
 
 ## Features to add in future:
 __ 1. Add database migrations( using Alembic)  
-2. Deploy the codebase to a cloud platform
+2. Deploy the codebase to a cloud platform __
+
