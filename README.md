@@ -26,3 +26,7 @@ docker run -p 8000:80 task-management-api
 ```
 ### 4. Go to this URL to interact with the API:  
 [localhost](http://localhost:8000/docs) 
+
+## Features to add in future:
+__ 1. Add database migrations( using Alembic)  
+2. Deploy the codebase to a cloud platform
