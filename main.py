@@ -1,9 +1,21 @@
-from fastapi import FastAPI, HTTPException, Depends
+from fastapi import FastAPI
 
 
-app = FastAPI()
+from routes import auth
+from routes import category
+from routes import task
 
-@app.get("/")
-def read_root():
-    return {"Hello": "World"}
+from database.db_setup import engine, Base
+
+
+Base.metadata.create_all(bind=engine)
+
+app = FastAPI(title="Task Management API", version="1.0.0")
+
+
+
+app.include_router(auth.router)
+app.include_router(category.router)
+app.include_router(task.router)
+
 
